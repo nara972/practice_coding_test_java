@@ -3,10 +3,10 @@ import java.util.*;
 public class Solution {
     public int[] solution(int []arr) {
         
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack= new Stack<>();
         
-        for(int n : arr){
-            if(stack.isEmpty() || stack.peek()!= n){
+        for(int n:arr){
+            if(stack.isEmpty() || stack.peek()!=n){
                 stack.add(n);
             }
         }
@@ -14,10 +14,9 @@ public class Solution {
         int[] answer = new int[stack.size()];
         int index = 0;
         
-        for(int n :stack){
-            answer[index++] = n;
+        for(int n:stack){
+            answer[index++]=n;
         }
-        
 
         return answer;
     }
