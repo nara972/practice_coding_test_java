@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT O.ANIMAL_ID,O.NAME
+FROM ANIMAL_OUTS O
+WHERE NOT EXISTS (SELECT 1
+                 FROM ANIMAL_INS I
+                 WHERE I.ANIMAL_ID=O.ANIMAL_ID)
+                 ORDER BY ANIMAL_ID;
